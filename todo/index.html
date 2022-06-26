@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>todo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="menu">
+      <button class="op btn" onclick="dialog.showModal()">
+        <div class="op__add-task op__circle op__circle-up"></div>
+        <div class="op__add-task op__circle op__circle-down"></div>
+      </button>
+      <button class="op btn">
+        <div class="op__del-task op__circle op__circle-up"></div>
+        <div class="op__del-task op__circle op__circle-down"></div>
+      </button>
+    </div>
+    <div class="tasks">
+      <div class="task">
+        <div class="task_content">Hello world</div>
+      </div>
+    </div>
+  </div>  
+
+  <dialog class="dialog">
+    <div class="dialog__inner">
+      <h3 class="title">Task creation</h3>
+      <form class="dialog__form" action="">
+        <input class="dialog__input" placeholder="Name" type="text">
+        <input class="dialog__input" placeholder="Description" type="text">
+        <div class="dialog__create-btn">
+          <input class="dialog__create btn" value="Create" type="submit" onclick="dialog.close()">
+          <div class="rect"></div>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script>
+    let dialog = document.querySelector(".dialog");
+  </script>
+</body>
+</html>
